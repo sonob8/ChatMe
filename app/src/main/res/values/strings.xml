@@ -33,4 +33,22 @@
   <string name="model_unavailable" translatable="false">Model is unavailable yet and downloading in background</string>
   <string name="prompt_is_empty" translatable="false">Please enter an non empty prompt</string>
   <string name="empty" translatable="false"/>
+
+  <string name="persona_helpful_assistant">Act as a helpful assistant.</string>
+  <string name="persona_sarcastic_bot">Act as a sarcastic bot that always finds a witty, slightly mocking way to answer.</string>
+  <string name="persona_shakespearean_poet">Respond in the style of a Shakespearean poet, using thee, thou, and flowery language.</string>
+
+  <string-array name="persona_prompts_array">
+    <item>@string/persona_helpful_assistant</item>
+    <item>@string/persona_sarcastic_bot</item>
+    <item>@string/persona_shakespearean_poet</item>
+  </string-array>
+
+  <string-array name="persona_display_names_array">
+    <item>Helpful Assistant</item>
+    <item>Sarcastic Bot</item>
+    <item>Shakespearean Poet</item>
+  </string-array>
+
+  <string name="label_persona_selector">Select Persona:</string>
 </resources>

@@ -21,28 +21,68 @@
     android:layout_margin="4dp"
     android:orientation="vertical">
 
+  <!-- New outer LinearLayout to group persona selector and existing controls -->
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:gravity="end"
-      android:orientation="horizontal">
+      android:orientation="vertical"
+      android:layout_marginBottom="8dp">
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/streaming_switch"
-        android:layout_width="wrap_content"
+    <!-- LinearLayout for Persona Selector -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:checked="true"
-        android:text="@string/streaming_switch" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/config_button"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="wrap_content"
+      <TextView
+          android:id="@+id/persona_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:text="@string/label_persona_selector" />
+
+      <Spinner
+          android:id="@+id/persona_spinner"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:entries="@array/persona_display_names_array" />
+          <!-- Using android:entries to directly populate from array -->
+    </LinearLayout>
+
+    <!-- Existing LinearLayout for Switch and Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="4dp"
-        android:text="@string/button_change_config" />
+        android:gravity="end"
+        android:orientation="horizontal">
 
+      <com.google.android.material.switchmaterial.SwitchMaterial
+          android:id="@+id/streaming_switch"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="end"
+          android:checked="true"
+          android:text="@string/streaming_switch" />
+
+      <Button
+          android:id="@+id/config_button"
+          style="?attr/materialButtonOutlinedStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="4dp"
+          android:text="@string/button_change_config" />
+
+      <Button
+          android:id="@+id/view_history_button"
+          style="?attr/materialButtonOutlinedStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="4dp"
+          android:text="View History" />
+
+    </LinearLayout>
   </LinearLayout>
 
   <androidx.recyclerview.widget.RecyclerView
